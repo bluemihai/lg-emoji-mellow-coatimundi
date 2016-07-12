@@ -3,23 +3,23 @@ Publishing an npm package with ES6
 
 Goal: basically Challenge #7, emoji cipher (publish npm package)
 
-1. Install node and babel
+* Install node and babel
 ```
   brew install node
   npm install --save-dev babel-cli
   npm install --save-dev babel-preset-es2015
 ```
 
-2. Create a .babelrc file with  [Is this really necessary?]
+* Create a .babelrc file with  [Is this really necessary?]
 ```
   {
     presets: ["es2015"]
   }
 ```
 
-3. Create a /src directory for your source code and /dist for the traspiled output.
+* Create a /src directory for your source code and /dist for the traspiled output.
 
-4. Add to your project's package.json
+* Add to your project's package.json
 ```
   "scripts": {
     "build": "./node_modules/.bin/babel src -d dist -s",
@@ -33,6 +33,6 @@ Goal: basically Challenge #7, emoji cipher (publish npm package)
   }
 ```
 
-5. Create an account at npmjs.org and run npm login
+* Create an account at npmjs.org and run npm login
 
-6. Run npm publish, making sure the package name is unique
+* Run npm publish, making sure the package name is unique
