@@ -16,3 +16,6 @@ const encode = str => {
 }
 
 export { encode }
+
+console.log('hello')
+console.log(encode('bad'))
