@@ -1,5 +1,5 @@
-// 'use strict'
-//
+'use strict'
+
 const cipher = {
   a: '😸',
   b: '🏃',
@@ -8,24 +8,11 @@ const cipher = {
   e: '🤓'
 }
 
-var input = 'bad'
-
 const encode = str => {
-// export function encode(str) {
-  const strArray = str.split('')
-  const newStrArray = strArray.map( char => cipher[ char ] )
-  
-  return newStrArray.join('')
+  return str
+    .split('')
+    .map(char => cipher[ char ])
+    .join('')
 }
 
-// function encode (str) {
-//   var strArray = str.split('')
-//   var newStrArray = strArray.map(function (char) {
-//     return cipher[char]
-//   })
-//   return newStrArray.join('')
-// }
-
 export { encode }
-
-console.log(encode(input))
