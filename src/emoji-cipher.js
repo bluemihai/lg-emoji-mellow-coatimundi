@@ -49,7 +49,6 @@ const decode = emojiStr => {
   const reverseCipher = reverseObject(cipher)
   let alphaStr = ''
   for (var chr of emojiStr) {
-    console.log(chr)
     alphaStr += reverseCipher[chr]
   }
   return alphaStr

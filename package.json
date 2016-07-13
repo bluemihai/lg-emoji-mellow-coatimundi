@@ -9,7 +9,7 @@
     "dist"
   ],
   "name": "lg-emoji-mellow-coatimundi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Learners Guild challenge #7",
   "main": "dist/emoji-cipher.js",
   "devDependencies": {
@@ -17,6 +17,6 @@
     "babel-preset-es2015": "^6.9.0",
     "jasmine": "^2.4.1"
   },
-  "author": "Mihai Banulescu",
+  "author": "Mihai Banulescu, Rachel Ralston, John Hopkins",
   "license": "ISC"
 }
