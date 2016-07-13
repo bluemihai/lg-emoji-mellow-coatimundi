@@ -30,12 +30,12 @@ const cipher = {
 }
 
 let reverseObject = givenObject => {
-	let newObject = {}
-	Object.keys(givenObject).forEach( k => {
-  	let v = givenObject[k]
-  	newObject[v] = k
-	});
-	return newObject
+  let newObject = {}
+  Object.keys(givenObject).forEach( k => {
+    let v = givenObject[k]
+    newObject[v] = k
+  });
+  return newObject
 }
 
 const encode = str => {
@@ -45,12 +45,14 @@ const encode = str => {
     .join('')
 }
 
-
 const decode = emojiStr => {
-	return emojiStr
-		.split('')
-		.map(char => /*reverse cipher??*/ [char])
-		.join('')
+  const reverseCipher = reverseObject(cipher)
+  return emojiStr
+    .split('')
+    .map(char => reverseCipher[ char ])
+    .join('')
 }
 
-export { encode }
+console.log("foo" + decode(/^😍🍕🌞/))
+
+export { encode, decode }
