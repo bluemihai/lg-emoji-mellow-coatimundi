@@ -53,6 +53,4 @@ const decode = emojiStr => {
     .join('')
 }
 
-console.log("foo" + decode(/^😍🍕🌞/))
-
-export { encode, decode }
+export { encode, decode, reverseObject }
