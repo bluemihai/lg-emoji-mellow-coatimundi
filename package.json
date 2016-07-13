@@ -1,19 +1,22 @@
 {
   "scripts": {
-    "build": "./node_modules/.bin/babel src -d dist -s",
+    "build": "./node_modules/.bin/babel src -d dist -s --copy-files",
     "prepublish": "npm run build",
-    "buildwatch": "./node_modules/.bin/babel -w src -d dist -s"
+    "buildwatch": "./node_modules/.bin/babel -w src -d dist -s --copy-files",
+    "test": "babel-node dist/spec/run.js"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "name": "lg-emoji-mellow-coatimundi",
   "version": "1.0.0",
   "description": "Learners Guild challenge #7",
   "main": "dist/emoji-cipher.js",
   "devDependencies": {
     "babel-cli": "^6.10.1",
-    "babel-preset-es2015": "^6.9.0"    
+    "babel-preset-es2015": "^6.9.0",
+    "jasmine": "^2.4.1"
   },
   "author": "Mihai Banulescu",
   "license": "ISC"
 }
-

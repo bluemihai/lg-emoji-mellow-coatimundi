@@ -54,7 +54,3 @@ const decode = emojiStr => {
 }
 
 export { encode }
-
-//console.log('hello')
-//console.log(encode('bad'))
-console.log(reverseObject({a:1, b:2, c:3}))
