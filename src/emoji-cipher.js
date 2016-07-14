@@ -42,6 +42,7 @@ let reverseObject = givenObject => {
 
 const encode = str => {
   return str
+    .toLowerCase()
     .split('')
     .map(char => cipher[ char ])
     .join('')
