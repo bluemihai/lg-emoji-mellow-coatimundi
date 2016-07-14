@@ -1,32 +1,34 @@
 'use strict'
 
+import { get as getEmoji, which as whichEmoji, emojify } from 'node-emoji'
+
 const cipher = {
-  a: '😸',
-  b: '🏃',
-  c: '🐴',
-  d: '👿',
-  e: '🤓',
-  f: '😒',
-  g: '🙄',
-  h: '💩',
-  i: '💅',
-  j: '👻',
-  k: '💃',
-  l: '🖖',
-  m: '🍾',
-  n: '🌭',
-  o: '🍕',
-  p: '🌞',
-  q: '🦄',
-  r: '🌂',
-  s: '💉',
-  t: '🔮',
-  u: '💣',
-  v: '🚀',
-  w: '💦',
-  x: '💨',
-  y: '😎',
-  z: '😍'
+  a: getEmoji('alien'),
+  b: getEmoji('bell'),
+  c: getEmoji('cloud'),
+  d: getEmoji('droplet'),
+  e: getEmoji('ear'),
+  f: getEmoji('family'),
+  g: getEmoji('golf'),
+  h: getEmoji('heart'),
+  i: getEmoji('icecream'),
+  j: getEmoji('jack_o_lantern'),
+  k: getEmoji('key'),
+  l: getEmoji('lock'),
+  m: getEmoji('muscle'),
+  n: getEmoji('notes'),
+  o: getEmoji('ocean'),
+  p: getEmoji('palm_tree'),
+  q: getEmoji('question'),
+  r: getEmoji('rose'),
+  s: getEmoji('smile'),
+  t: getEmoji('thumbsup'),
+  u: getEmoji('umbrella'),
+  v: getEmoji('video_game'),
+  w: getEmoji('wine_glass'),
+  x: getEmoji('x'),
+  y: getEmoji('yin_yang'),
+  z: getEmoji('zzz')
 }
 
 let reverseObject = givenObject => {
@@ -54,4 +56,6 @@ const decode = emojiStr => {
   return alphaStr
 }
 
-export { encode, decode, reverseObject }
+export { encode, decode, reverseObject, cipher }
+
+console.log(encode('abcdefghijklmnopqrstuvwxyz'))
