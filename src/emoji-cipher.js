@@ -41,13 +41,18 @@ let reverseObject = givenObject => {
 }
 
 const encode = str => {
-  return str.toLowerCase().split('').map(encodeChar).join('')
+  return str.toLowerCase()
+  .split('')
+  .map(encodeChar)
+  .join('')
 }
 
 const encodeChar = ch => {
   return ('abcdefghijklmnopqrstuvwxyz'.indexOf(ch) >= 0) ? cipher[ch] : ch
 }
-
+//object.keys for getting emojis cipher where keys are alpha, object.keys of reverse cipher, .join
+//pull repo.
+//nmp install
 const decode = emojiStr => {
   const reverseCipher = reverseObject(cipher)
   let alphaStr = '';
