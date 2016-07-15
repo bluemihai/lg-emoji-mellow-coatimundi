@@ -1,6 +1,6 @@
 'use strict'
 
-import { get as getEmoji, which as whichEmoji, emojify } from 'node-emoji'
+import { get as getEmoji } from 'node-emoji'
 
 const cipher = {
   a: getEmoji('alien'),
@@ -41,18 +41,25 @@ let reverseObject = givenObject => {
 }
 
 const encode = str => {
-  return str
-    .toLowerCase()
-    .split('')
-    .map(char => cipher[ char ])
-    .join('')
+  return str.toLowerCase().split('').map(encodeChar).join('')
+}
+
+const encodeChar = ch => {
+  return ('abcdefghijklmnopqrstuvwxyz'.indexOf(ch) >= 0) ? cipher[ch] : ch
 }
 
 const decode = emojiStr => {
   const reverseCipher = reverseObject(cipher)
-  let alphaStr = ''
-  for (var chr of emojiStr) {
-    alphaStr += reverseCipher[chr]
+  let alphaStr = '';
+  
+  var chars = emojiStr.split('')
+  while (chars.length > 0) {
+    var emoji = chars.shift()
+    while (!reverseCipher[emoji]) {
+      if (chars.length === 0) return alphaStr
+      emoji += chars.shift()
+    }
+    alphaStr += reverseCipher[emoji]
   }
   return alphaStr
 }

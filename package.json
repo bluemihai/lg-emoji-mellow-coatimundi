@@ -9,7 +9,7 @@
     "dist"
   ],
   "name": "emoji-cipher-lg-mc",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Learners Guild challenge #7",
   "main": "dist/emoji-cipher.js",
   "devDependencies": {
