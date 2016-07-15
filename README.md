@@ -1,6 +1,10 @@
 LearnersGuild EmojiCipher MellowCoatimundi
 ==========================================
 
+## Specs
+
+This is Learners Guild Goal #7.  Here are [the specs](https://github.com/GuildCrafts/web-development-js/issues/7).
+
 ## Installation and Usage
 
 npm install lg-emoji-mellow-coatimundi
